@@ -1,0 +1,115 @@
+.table_list,.CorssTable {
+  width: 100%;line-height: 1.6;
+  border: 1px solid #E4E9F2;
+  th,td {
+    border: 1px solid #E4E9F2;padding: 5px;height: 24px;
+  }
+  thead {
+    th {
+      background: #EFF2F7;color: #1f2d3d;font-size: 15px;white-space:nowrap;
+    }
+  }
+  tbody {
+    tr:nth-child(2n) {
+      background: #FAFAFA;
+    }
+    tr:hover {
+      background: darken(#FAFAFA,2%);
+    }
+    td.level {
+      color: $cff;
+      &.yiban {background: $green;}
+      &.liang {background: darken($green,10%);}
+      &.you {background: darken($green,20%);}
+      &.cha {background: mix($yellow,$red);}
+      &.ju {background: darken($red,10%);}
+      &.jicha {background: darken($red,25%);}
+    }
+    em {color: $red;font-weight: bold;font-size: 16px;}
+  }
+}
+.table_info {
+  line-height: 1.6;width: 100%;background: $cff;border-radius: 5px;
+  border: 1px solid $cee;
+  td,th {padding:10px 20px;border: 1px solid $cee;}
+  th,.th {
+    text-align: right;color: $c55;background: $cf9;width: 80px;
+    input {
+      display: inline-block;width: 80px;background: none;border: none;text-align: right;color: $blue;font-size: 13px;text-decoration: underline;
+      &:focus {outline: none;color: $c55;}
+    }
+  }
+  .th {white-space:nowrap;}
+  td {position: relative;color: $c99;}
+}
+.edit_table {
+  line-height: 1.6;width: 100%;margin-top: 10px;background: $cff;border-radius: 5px;
+  border: 1px solid $cee;
+  td,th {padding:10px 20px;}
+  th {
+    text-align: right;color: $c55;width: 100px;border-right: 1px solid $cee;background: $cf9;
+    input {
+      display: inline-block;width: 80px;background: none;border: none;text-align: right;color: $blue;font-size: 13px;text-decoration: underline;
+      &:focus {outline: none;color: $c55;}
+    }
+  }
+  tr {
+    border-bottom: 1px solid $cee
+  }
+  td {position: relative;color: $c55;}
+}
+.info_table {
+  line-height: 1.6;width: 100%;text-align: center;margin-bottom: 10px;
+  &,td,th {border: 1px solid rgba($blue,.15);padding:7px 10px;}
+  thead {
+    border-bottom: 2px solid rgba($blue,.15);font-size: 14px;
+    color: $blue;background: rgba($blue,.1);
+  }
+  tbody {
+    th {color: $blue;}
+    tr {
+      &:nth-child(2n){background: $cfa;}
+    }
+  }
+  a {
+    color: $cf60;border-bottom: 1px dotted $cf60;@include dz();
+    &:hover {color: $green;border-color: $green;}
+  }
+}
+
+
+
+
+.button,.status {
+  color: #fff;display: inline-block;padding: 0 0.5em;margin-right: 5px;
+  border: none;cursor: pointer;background: #999;
+  &:hover {opacity: .8;}
+  &.success {background: #00a604;}
+  &.danger {background: #d81111;}
+  &.warning {background: #d88f11;}
+  &.disable {background: #999;}
+  &.blue {background: $blue;}
+  &.big {
+    font-size: 14px;padding: 5px 10px;border-radius: 4px;
+  }
+}
+.link {
+  cursor: pointer;
+  &.number {
+    color: $blue;font-weight: bold;
+    text-shadow: 1px 1px 0 $cff;
+    &:hover {text-decoration: underline;color: $cf60;}
+  }
+  &.btn {
+    display: inline-block;background: $blue;color: $cff;padding: 3px 8px;
+    &:hover {background: $cf60;}
+  }
+}
+.page_box {
+  margin-top: 10px;text-align: right;
+}
+
+.admin_tool + .main_h3 {padding-top: 0;}
+.main_h3 {
+  color: $blue;padding-top: 20px;padding-bottom: 10px;
+}

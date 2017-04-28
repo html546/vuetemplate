@@ -1,0 +1,90 @@
+.edit_h3 {
+  margin-top: 20px;border-bottom: 1px solid $cee;padding-bottom: 10px;text-indent: 10px;margin-bottom: 15px;
+  color: $c22;
+}
+.edit_box {
+  display: table;width: 100%;margin-top: 20px;margin-bottom: 200px;
+  .edit_form,.edit_preview {
+    display: table-cell;
+  }
+  .edit_preview {
+    width: 400px;
+    .pre_layout {
+      background: $cff;border: 20px solid $cf0;border-radius: 5px;
+    }
+  }
+  .edit_form {padding-right: 20px;}
+}
+.edit_table {
+  .el-upload {display: inline-block;}
+}
+// 填写提示
+span.fill_prompt {font-size: 12px; color: red; padding-left: 15px;}
+
+.fix_bg {
+  position: fixed;left: 0;top: 0;right: 0;bottom: 0;background: rgba(#000,.7);z-index: 10;
+}
+.img_box {
+  position: fixed;left: 50%;top: 50%;z-index: 11;width: 80%;height: 80%;background: #fff;overflow-y: scroll;
+  @include yd(-50%,-50%);
+  box-shadow:0 0 0 20px #fff;
+  ul {overflow: hidden;}
+  li {width: 19%;float: left;margin-right: 1%;margin-bottom: 1%;}
+  img {width: 100%;cursor: pointer;}
+}
+
+.feedback_preview {
+  position: fixed;left: 50%;top: 50%;z-index: 11;width: 500px;max-height: 80%;background: #fff;overflow-y: auto;
+  @include yd(-50%,-50%);border-radius: 1px;padding: 20px;border-radius: 10px;line-height: 1.8;
+  .title {
+    font-size: 15px;color: $blue;height: 30px;
+  }
+  .time {
+    border-top: 1px solid $cdd;color: $c99;padding-top: 5px;
+  }
+  .re_title {
+    font-size: 13px;color: $red;margin-top: 10px;
+    time {font-weight: normal;padding:0 5px;}
+  }
+  article {
+    line-height: 2;padding: 10px 0;text-indent: 2em;
+  }
+}
+.img_preview {
+  background: $cfa;display: inline-block;padding: 10px;border: 1px solid $cdd;border-radius: 5px;
+  img {max-width: 200px;max-height: 200px;}
+}
+
+.input_city,.input_select {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #c0ccda;
+  color: #1f2d3d;
+  display: inline-block;
+  font-size: inherit;
+  height: 36px;
+  line-height: normal;
+  padding: 3px 10px;
+  width: 160px;margin-right: 10px;
+  &:focus {
+    border: 1px solid $blue;outline: none;
+  }
+  &.w100 {
+    width: 100px;
+  }
+}
+.input_radio {
+  display: inline-block;cursor: pointer;padding-right: 20px;
+}
+.el-form-item__content {
+  .unit {
+    position: absolute;margin-left: -25px;color: $c99;z-index: 2;line-height: 36px;
+    &.tow {
+      margin-left: -45px;
+    }
+  }
+}
+.form_box {
+  background: $cfa;margin-top: 10px;margin-bottom: 10px;
+  @extend .cf;padding: 15px 15px 0;border: 1px solid $cdd;
+}

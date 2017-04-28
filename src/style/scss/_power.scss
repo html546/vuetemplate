@@ -1,0 +1,67 @@
+.power {
+  @extend .cf;position: fixed;top: 100px;right: 0;bottom: 20px;left: 220px;
+  .tab {
+    width: 240px;padding-right: 10px;overflow-y: auto;
+    position: absolute;left: 0;top: 0;bottom: 0;
+    &::-webkit-scrollbar {width: 0;}
+    li {
+      height: 36px;background: $cf9;margin-bottom: 1px;position: relative;cursor: pointer;
+      i {
+        display: block;width: 16px;height: 16px;text-align: center;line-height: 16px;font-size: 12px;
+        position: absolute;left: 10px;top: 10px;border-radius: 3px;color: $cff;
+      }
+      span {
+        display: block;line-height: 36px;padding-left: 36px;font-weight: bold;
+        text-transform:capitalize;
+      }
+      .b {
+        i {background: $blue;}
+        span {color: $blue;}
+      }
+      .v {
+        i {background: $green;}
+        span {color: $green;}
+      }
+      &.curr {
+        background: $blue;
+        span {color: $cff;}
+        i {background: $cff;color: $blue;}
+        &:after {
+          content: "";width: 10px;height: 10px;display: block;position: absolute;background: $blue;
+          right: -5px;@include xz(45);top: 14px;
+        }
+      }
+    }
+  }
+  .con {
+    left: 270px;right: 20px;bottom: 0;top: 0;position: absolute;
+    .info {
+      border-bottom: 5px solid $elgray;height: 36px;line-height: 36px;padding-left: 10px;
+      strong {text-transform:capitalize;font-weight: bold;font-size: 18px;color: $blue;margin-right: 24px;}
+      em {color: $green;}
+    }
+    .method {
+      margin-top: 15px;
+      header {
+        border-bottom: 1px solid $elgray;background: $cf9;position: relative;
+        h2 {line-height: 36px;text-indent: 20px;color: $black;}
+        .el-button-group {
+          position: absolute;right: 5px;top: 8px;
+        }
+      }
+      .role {
+        padding: 5px 0;
+        label {
+          display: inline-block;
+          input {display: none;}
+          span {
+            display: block;padding: 5px 8px;border-radius: 3px;border: 1px solid $gray;cursor: pointer;margin:5px
+          }
+          input:checked + span {
+            border-color: $blue;background: $blue;color: $cff;
+          }
+        }
+      }
+    }
+  }
+}

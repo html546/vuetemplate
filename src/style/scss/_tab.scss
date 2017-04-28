@@ -1,0 +1,56 @@
+.tab_sect {
+  @extend .cf;
+  .nothing {
+    font-size: 24px;color: $ccc;line-height: 3;
+  }
+  .tab {
+    // position: fixed;left: 200px;top:81px;bottom: 0;
+    // width: 220px;overflow-y: auto;z-index: 3;
+    width: 200px;float: left;margin-right: 15px;
+    background: $cf9;
+    li {
+      text-align: right;padding:0 20px;
+      cursor: pointer;border-bottom: 1px solid $cff;
+      @include ns();
+      span {@include oneline(36px);display: block;}
+      &:hover {
+        color: $blue;
+        background: rgba($blue,.1);
+      }
+    }
+    .on {
+      color: $cff;background: $blue;font-weight: bold;position: relative;
+      &:after {
+        content: "";width: 10px;height: 10px;display: block;position: absolute;background: $blue;
+        right: -5px;@include xz(45);top: 14px;
+      }
+      &:hover {
+        color: $cff; background: $blue;
+      }
+    }
+  }
+  .tab_con {
+    // position: fixed;right: 20px;left: 440px;top: 150px;bottom: 20px;
+    // overflow-y: auto;z-index: 3;
+    float: right;
+    @include calc("width","100% - 215px");
+    .edit_table {
+      margin-top: 0;
+      th {white-space:nowrap;}
+    }
+  }
+}
+
+.tab_across {
+  .tab {
+    @extend .cf;border-bottom: 1px solid $cee;margin-bottom: 15px;height: 40px;
+    li {
+      float: left;height: 36px;line-height: 40px;padding: 0 10px;font-size: 14px;cursor: pointer;color: $c99;margin-right: 10px;
+      &:hover {color: $c22;}
+      &.on {
+        color: $blue;font-weight: bold;
+        border-bottom: 4px solid $blue;
+      }
+    }
+  }
+}

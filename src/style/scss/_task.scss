@@ -1,0 +1,73 @@
+.tel_task_box {
+  padding: 10px 0;
+}
+.tel_task_h3 {color: $blue;line-height: 1.4;margin-bottom: 10px;}
+.tel_task_item {
+  display: table;width: 100%;border-collapse: collapse;margin-top: -1px;
+  @include calc("width","100% - 1px");line-height: 1.6;
+  .name,.item {display: table-cell;border: 1px solid $cee;padding: 10px;}
+  .name {width: 100px;background: $cf9;text-align: right;font-weight: bold;vertical-align: middle;}
+}
+.tel_card {
+  width: 450px;float: left;margin: 10px 10px 10px 0;
+  header {
+    height: 40px;border: 1px solid $cee;background: darken($cf9,2%);
+    strong {display: block;float: left;line-height: 40px;text-indent: 10px;font-size: 14px;color: $blue;}
+  }
+}
+.tel_qa {
+  @extend .cf;
+  .question {
+    float: left;
+    @include calc("width","100% - 300px");
+  }
+
+}
+.answer {
+  .h3 {
+    font-size: 14px;
+    color: #FF4949;
+    height: 40px;
+    line-height: 40px;
+    background: #EFF2F7;
+    text-indent: 15px;
+  }
+  .formm {
+    padding: 20px;border: 1px solid $cee;
+    .el-form--label-top .el-form-item__label {
+      font-size: 12px; background: $cff;padding: 0 5px;margin-bottom: -8px;position: relative;z-index: 1;margin-left: 5px;
+      color: $c99;
+    }
+    .el-form-item__content {line-height: 1;}
+    .el-form-item {margin-bottom: 10px;}
+    .input_select {height: 33px;width: 280px;margin: 0;border: 1px solid $cee;font-size: 13px;}
+  }
+  .boxx {
+    padding: 20px;border: 1px solid $cee;
+  }
+}
+.photo_label {
+  display: block;position: absolute;left: 0;top: 0;right: 0;bottom: 0;z-index: 9;cursor: pointer;
+  @include ns();
+  input {display: none;}
+  div {
+    display: block;position: absolute;left: 0;top: 0;right: 0;bottom: 0;z-index: 9;text-align: center;background: rgba($cff,.6);
+    line-height: 180px;color: $cff;text-shadow: 1px 1px 1px $c00;
+    &:before {
+      content: "点击选择"
+    }
+  }
+  input:checked + div {
+    background: rgba($c99,.5);
+    &:before {
+      content: "点击取消选择"
+    }
+  }
+}
+.no_checked {
+  position: absolute;left: 0;top: 0;right: 0;bottom: 0;background: rgba($red,.2);z-index: 10;
+  text-align: center;line-height: 180px;color: $cff;text-shadow: 1px 1px 1px $c00;
+  &:before {
+    content: "此项已退回"
+  }
+}

@@ -1,0 +1,16 @@
+.article {
+  h1 {
+    font-size: 24px;color: $c22;text-align: center;line-height: 1.4;border-bottom: 1px solid $cdd;padding-bottom: 15px;
+  }
+  time {
+    color: $c99;display: block;padding: 10px 0;border-top: 1px solid $cdd;text-align: right;
+  }
+  article {
+    padding: 10px 0;line-height: 2;font-size: 14px;text-indent: 2em;
+  }
+}
+.cut_comment {
+  display: block;cursor: pointer;
+  @include oneline(16px);width: 120px;text-align: center;
+  margin: 0 auto;
+}

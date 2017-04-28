@@ -1,0 +1,111 @@
+.photo_wall {
+  position: relative;z-index: 99;
+  h1 {
+    position: fixed;top: 10px;text-align: center;font-size: 32px;z-index: 9;left: 0;right: 9px;color: rgba($cff,.5);
+  }
+  .close {
+    position: fixed;right: 10px;top: 10px;background: $red;color: $cff;z-index: 9;font-size: 15px;padding: 5px;cursor: pointer;
+  }
+  .wall_box {
+    position: fixed;top: 0;bottom: 0;width: 50%;background: $cff;
+    box-shadow: 0 0 0 10px rgba($c00,.3) inset;
+    &.left_box {left: 0;}
+    &.right_box {right: 0;}
+    ul {
+      text-align: center;position: absolute;top: 20px;bottom: 20px;left: 20px;right: 20px;overflow-y: auto;
+      padding: 20px;
+      li {
+        margin: 10px;width: 150px;display: inline-block;
+        i {
+          display: block;width: 150px;height: 150px;
+        }
+        span {
+          display: block;width: 150px;color: $c55;
+          @include oneline(24px);
+        }
+      }
+    }
+    .big {
+      position: absolute;left: 0;top: 0;right: 0;bottom: 0;
+      background-color: $c00;background-repeat: no-repeat;
+      background-size: contain;background-position: center;cursor: pointer;
+      span {
+        display: block;color: $cff;text-align: center;font-size: 22px;margin-top: 10px;
+      }
+    }
+  }
+}
+
+.issue_box {
+  padding: 20px;line-height: 2;background: $cf9;
+  h3 {color: $red;}
+}
+
+.tel_tab {
+  border-bottom: 1px solid $cdd;height: 37px;
+  &.small {
+    height: auto;border-bottom: none;
+    li {
+      border-radius: 5px;margin-bottom: 5px;padding: 5px;
+      &.on {
+        border: 1px solid $blue;background: $blue;color: $cff;
+      }
+    }
+  }
+  ul {@extend .cf;}
+  li {
+    float: left;padding: 10px;border: 1px solid $cdd;background: $cf9;border-radius: 5px 5px 0 0;
+    height: 16px;line-height: 16px;margin-right: 5px;cursor: pointer;
+    &.on {
+      background: $cff;border-bottom: 1px solid $cff;color: $blue;font-weight: bold;
+    }
+  }
+}
+.tel_task {
+  .h3 {height: 20px;line-height: 20px;color: $c22;padding-top: 20px;}
+  header {
+    position: relative;
+    .edit {
+      position: absolute;right: 0;bottom: 0;
+    }
+  }
+  .self_type {margin-top: 10px;}
+}
+.notes {
+  line-height: 1.5;padding-top: 10px;
+  .h3 {height: 20px;line-height: 20px;color: $blue;}
+  p {
+    padding: 5px 0;color: $c55;border-bottom: 1px solid $cee;
+    strong {
+      color: $c22;
+    }
+  }
+}
+.tel_log {
+  & > ul > li {
+    padding: 10px 0;
+    &:not(:last-child) {
+      border-bottom: 1px dashed $cdd;
+    }
+  }
+  .nodata {
+    text-align: center;padding: 20px;font-size: 15px;color: $ccc;
+  }
+}
+.log_photo_list {
+  ul {}
+  li {
+    float: left;padding: 10px;
+    i {
+      display: block;width: 150px;height: 150px;position: relative;padding: 5px;border: 1px solid $cdd;
+      img {
+        display: block;max-width: 150px;max-height: 150px;position: absolute;left: 50%;top: 50%;
+        @include yd(-50%,-50%);
+      }
+    }
+    span {
+      display: block;width: 150px;padding: 0 5px;background: $cfa;border: 1px solid $cdd;margin-top: -1px;
+      @include oneline(22px);
+    }
+  }
+}

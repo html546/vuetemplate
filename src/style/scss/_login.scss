@@ -1,0 +1,42 @@
+.login_html {
+  background:url("/static/image/login_bg.png") center 0 no-repeat #116FBF;
+  width: 1920px;height: 1080px;@extend .cf;
+  position: fixed;left: 50%;top: 50%;
+  @include yd(-50%,-50%);
+}
+.login_box {
+  width: 325px;height: 230px;margin-left: auto;margin-right: auto;margin-top: 425px;margin-bottom: 100px;
+  position: relative;left: 120px;
+  dl {
+    input {
+      display: block;height: 20px;line-height: 16px;box-sizing:content-box;
+      padding:10px 10px;width: 225px;border-radius: 5px;font-size: 14px;
+      &.username {
+        background: url("/static/image/icon_login_user.png") right 10px center no-repeat $cff;
+      }
+      &.password {
+        background: url("/static/image/icon_login_password.png") right 11px center no-repeat $cff;
+      }
+    }
+    dd {
+      padding-bottom: 20px;
+      input {
+        border: 1px solid $ccc;
+        &.captcha {width: 105px;float: left;}
+      }
+      img {height: 40px;margin-left: 10px;border: 1px solid $ccc;border-radius: 5px;cursor: pointer;width: 108px;}
+    }
+    dt {
+      input {
+        background:$blue;color:$cff;border: 1px solid $blue;cursor: pointer;
+        @include dz();font-size: 16px;
+        &:hover {
+          background:rgba($blue,0.90);
+        }
+      }
+    }
+  }
+}
+.login_copy {
+  text-align: center;color: $cff;font-size: 11px;opacity: .5;
+}

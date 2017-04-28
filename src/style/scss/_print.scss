@@ -1,0 +1,43 @@
+span.line {
+  display: inline-block;line-height: 20px;
+  border-bottom: 1px solid $c00;text-indent: 10px;
+  @for $i from 1 through 50 {
+    &.w#{$i}0 { min-width: 10px * $i; }
+  }
+}
+p span.blank {
+  display: inline-block;position: relative;top: 10px;
+  text-indent: 10px;overflow: hidden;
+  @for $i from 1 through 50 {
+    &.w#{$i}0 { min-width: 10px * $i; }
+  }
+}
+td span.blank,b span.blank {
+  display: inline-block;position: relative;top: 5px;
+  text-indent: 10px;overflow: hidden;
+  @for $i from 1 through 50 {
+    &.w#{$i}0 { min-width: 10px * $i; }
+  }
+}
+
+.print_page {
+  width: 920px;margin: 0 auto;padding: 40px;color: $c00;
+  box-shadow: 0 0 0 1000px $cf9;
+  .page_title {font-size: 32px;text-align: center;font-weight: bold;font-size: "黑体";margin-bottom: 20px;}
+  table {
+    width: 100%;margin-top: -1px;line-height: 1.6;
+    &,td,th {border: 1px solid $c00;}
+    td,th {min-width: 50px;padding: 5px;}
+    img {width: 300px;}
+    tbody {
+      th {
+        font-size: 16px;font-size: "黑体";background: $cee;
+      }
+    }
+    thead {
+      th {
+        font-size: 18px;font-size: "黑体";background: $cee;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.auth_bg {
+  position: fixed;left: 0;top: 0;right: 0;bottom: 0;
+  background:url("/static/image/login_bg.png") center 0 no-repeat #116FBF;
+  filter: blur(150px);
+}
+.auth_loading {
+  width: 150px;height: 150px;position: fixed;left: 50%;top: 50%;
+  margin: -75px 0 0 -75px;background: rgba($cff,.5);border-radius: 10px;
+  .auth_icon {
+    font-size: 75px;display: block;width: 150px;height: 130px;text-align: center;line-height: 130px;color: $cff;
+  }
+  .auth_tip {
+    display: block;text-align: center;margin-top: -15px;
+  }
+  .auth_btn {
+    position: absolute;bottom: -35px;left: 50%;margin-left: -34px;
+  }
+}

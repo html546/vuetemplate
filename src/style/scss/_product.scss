@@ -1,0 +1,46 @@
+.all_stroe {
+  position: relative;
+  .all_control {
+    position: absolute;right: 0;top: 0;cursor: pointer;z-index: 2;
+  }
+  .store_city {
+    padding: 8px;position: relative;
+    &:not(:last-child) {border-bottom: 1px solid $gray}
+    &:nth-child(2n) {background: $cf9;}
+    dl {
+      display: table;
+      dt,dd {display: table-cell;}
+      dt {
+        width: 100px;vertical-align: middle;color: $blue;font-size: 16px;font-weight: bold;text-align: right;
+      }
+      dd {
+        label {
+          display: inline-block;
+          input {display: none;}
+          span {
+            display: block;padding: 5px 8px;border-radius: 3px;border: 1px solid $gray;cursor: pointer;margin:5px
+          }
+          input:checked + span {
+            border-color: $blue;background: $blue;color: $cff;
+          }
+        }
+      }
+    }
+    .control {
+      position: absolute;right: 0;top: -22px;padding: 5px;
+      display: none;
+    }
+    &:hover .control {display: block;}
+  }
+  .store_province {
+    .province_control {
+      padding-bottom: 10px;
+    }
+    .check_control {
+      display: inline-block;padding: 5px;background: $cfa;border: 1px solid $cdd;border-radius: 3px;cursor: pointer;
+      &:hover {
+        border-color: $green;background: $green;color: $cff;cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.search_pro {
+  padding: 15px 15px 5px;margin-bottom: 20px;border: 1px solid #DFE6ED;
+  background:#EFF2F7;@extend .cf;
+  .search_box {
+    display: block;padding:0 10px 10px 0;float: left;
+    height: 36px;
+    @extend .cf;
+    .item {
+      font-weight: bold;display: block;float: left;
+      color:$c55;line-height: 36px;
+      &:after{content: "："}
+    }
+    .el-input,.el-select {float: left;width: auto;}
+  }
+}
+.pagination {
+  text-align: right;padding: 10px 0;
+}

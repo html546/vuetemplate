@@ -1,0 +1,35 @@
+.fiexd_bg {
+  position: fixed;left: 0;top: 0;right: 0;bottom: 0;
+  background: rgba($c00,.5);z-index: 9;
+}
+.edit_menu {
+  width: 400px;z-index: 10;position: fixed;left: 50%;top: 50%;
+  @include yd(-50%,-50%);background: $cff;padding: 20px;border-radius: 10px;box-shadow: 2px 2px 5px $c55;
+  h3 {
+    color: $blue;padding-bottom: 15px;
+  }
+}
+.menu_tree {
+  .el-button {margin: 0;opacity: .2;}
+  tr {
+    &:hover {
+      .el-button {opacity: 1;}
+    }
+    &.first {
+      td:not(:first-child) {
+        color: $red;font-size: 15px;font-weight: bold;
+      }
+      td:nth-child(1) {
+        // background: $red;color: $cff;
+      }
+    }
+    &.second {
+      td:not(:first-child) {
+        color: $blue;font-size: 14px;
+      }
+      td:nth-child(1) {
+        // background: $blue;color: $cff;
+      }
+    }
+  }
+}
