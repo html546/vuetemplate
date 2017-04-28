@@ -27,11 +27,15 @@ export default {
     }
   },
   created () {
+    // window.onunload = function () { // 关闭页面时或刷新时，删除当前页存储
+    //   window.localStorage.removeItem('vuetemplatelogin')
+    // }
   },
   methods: {
     login: function () {
       console.log(this.dat)
       if (this.dat.account === 'yanmo' && this.dat.password === '123') {
+        window.localStorage.vuetemplatelogin = this.dat
         this.$router.push('/')
       } else {
         this.$alert('帐号或密码错误', '提示', {type: 'error'})
