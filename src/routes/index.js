@@ -1,11 +1,11 @@
 import frame from '../frame/frame.vue'
+// const Foo = { template: '<router-view></router-view>' }
 import index from '../page/index.vue'
 import home from '../page/home.vue'
 import login from '../page/login.vue'
 // 入门
 import introduction from '../page/introduction/index.vue'
 import introductionDetails from '../page/introduction/details.vue'
-
 import introductionDetailspage from '../page/introduction/detailspage/detailspage.vue'
 
 // 进阶
@@ -26,10 +26,14 @@ export default [
   },
   {
     path: '/home',
-    component: home
+    component: home,
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: '/introduction',
+    // component: Foo,
     component: frame,
     children: [
       {path: '', component: introduction},
