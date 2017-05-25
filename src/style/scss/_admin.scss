@@ -152,7 +152,7 @@
 
 .admin_tool {
   height: 40px;background:#EFF2F7;@extend .cf;
-  position: fixed;left: 200px;top: 40px;right: 0;z-index: 2;
+  // position: fixed;left: 200px;top: 40px;right: 0;z-index: 2;
   box-shadow: 10px 10px 20px rgba($cff,.9);
   .admin_tool_btn {
     float: left;@extend .cf;

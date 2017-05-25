@@ -1,5 +1,5 @@
 import frame from '../frame/frame.vue'
-// const Foo = { template: '<router-view></router-view>' }
+const Foo = { template: '<router-view></router-view>' }
 import index from '../page/index.vue'
 import home from '../page/home.vue'
 import login from '../page/login.vue'
@@ -11,8 +11,10 @@ import introductionDetailspage from '../page/introduction/detailspage/detailspag
 // 进阶
 import advanced from '../page/advanced/index.vue'
 import advancedDetails from '../page/advanced/details.vue'
-
 import advancedDetailspage from '../page/advanced/detailspage/detailspage.vue'
+
+// 组件系列
+import components from '../page/components/index.vue'
 
 // 配置路由
 export default [
@@ -48,6 +50,13 @@ export default [
       {path: '', component: advanced},
       {path: 'details', component: advancedDetails},
       {path: 'detailspage', component: advancedDetailspage}
+    ]
+  },
+  {
+    path: '/components',
+    component: Foo,
+    children: [
+      {path: '', component: components}
     ]
   }
 ]
